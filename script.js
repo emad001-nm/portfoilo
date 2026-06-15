@@ -482,7 +482,7 @@ class ProjectModal {
         modal.className = 'glass-modal';
         modal.innerHTML = `
             <div class="modal-container">
-                <button class="modal-close">&times;</button>
+              <button class="modal-close" aria-label="Close Modal">✕</button>
                 ${image ? `<div class="modal-image"><img src="${image}" alt="${title}"></div>` : ''}
                 <div class="modal-content">
                     <h2>${title}</h2>
@@ -512,7 +512,7 @@ class ProjectModal {
     }
 
     addModalStyles() {
-        if (document.getElementById('modal-styles')) return;
+        //if (document.getElementById('modal-styles')) return;
         const style = document.createElement('style');
         style.id = 'modal-styles';
         style.textContent = `
